@@ -12,7 +12,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{e4f6be5d-f214-78ee-baee-9bf5fc027855}</ProjectGuid>
+    <ProjectGuid>{e8483ce3-0f54-c37d-4080-78839825bee0}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -46,9 +46,11 @@
      <Compile Include="Assets\ToyGun.cs" />
      <Compile Include="Assets\RemoteControlledCharacter.cs" />
      <Compile Include="Assets\ResetSphere.cs" />
+     <Compile Include="Assets\ballHitsTarget.cs" />
      <Folder Include="Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <Folder Include="Assets\True Explosions" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -348,16 +350,16 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
      <Reference Include="Valve.Newtonsoft.Json">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Assets\SteamVR\Input\Plugins\JSON.NET\Valve.Newtonsoft.Json.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Assets\SteamVR\Input\Plugins\JSON.NET\Valve.Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\PackageCache\com.unity.visualscripting@1.7.8\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
      <Reference Include="Newtonsoft.Json">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime\Newtonsoft.Json.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -726,130 +728,130 @@
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.15f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.OpenVR">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.XR.OpenVR.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.XR.OpenVR.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.Management.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.XR.Management.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Subsystem.Registration">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Subsystem.Registration.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.UI">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.SpatialTracking">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEngine.SpatialTracking.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.UI">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.OpenVR.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.XR.OpenVR.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Services.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Analytics">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll</HintPath>
      </Reference>
      <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Services.Core.Environments">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
      </Reference>
      <Reference Include="Unity.XR.Management">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.XR.Management.dll</HintPath>
      </Reference>
      <Reference Include="UnityEditor.SpatialTracking">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\UnityEditor.SpatialTracking.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
-     <HintPath>C:\Users\Jacopo\Downloads\SteamVR Seminar\SteamVR Seminar\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+     <HintPath>C:\Users\Jacopo\Downloads\JamLabGame\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="SteamVR_Input_Editor.csproj">
-      <Project>{cea02ec6-ff4c-51b9-0959-384a1d1457ba}</Project>
+      <Project>{954a0801-fac3-a7ac-98a5-b4e0ad35160f}</Project>
       <Name>SteamVR_Input_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR.csproj">
-      <Project>{1b510da4-4b65-2d6f-a882-97c6f92ead5d}</Project>
+      <Project>{2a8ad176-008e-e6d5-1683-18598023273b}</Project>
       <Name>SteamVR</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Windows_EditorHelper.csproj">
-      <Project>{f4b3742a-5eaa-d54c-f122-cea764c9090e}</Project>
+      <Project>{e0b616d5-6d54-5c29-d135-cc49d5dd2bb3}</Project>
       <Name>SteamVR_Windows_EditorHelper</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Editor.csproj">
-      <Project>{84318904-7946-119a-9190-e2cac31468d4}</Project>
+      <Project>{c65558da-108a-8d12-d602-82885ff07108}</Project>
       <Name>SteamVR_Editor</Name>
     </ProjectReference>
     <ProjectReference Include="SteamVR_Actions.csproj">
-      <Project>{3d6799a1-bd9b-cceb-86ea-8740cfff9a55}</Project>
+      <Project>{84f72973-6d2b-20cf-4aba-e4ec50d34605}</Project>
       <Name>SteamVR_Actions</Name>
     </ProjectReference>
   </ItemGroup>
